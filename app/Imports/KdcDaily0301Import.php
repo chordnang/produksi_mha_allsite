@@ -90,6 +90,6 @@ class KdcDaily0301Import implements ToModel, WithStartRow, WithCalculatedFormula
 
     public function startRow(): int
     {
-        return 4;
+        return 2;
     }
 }
