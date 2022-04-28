@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kdc_s_ims0305s', function (Blueprint $table) {
-            $table->id();
             $table->date('date')->nullable();
             $table->string('nama')->nullable();
             $table->string('jabatan')->nullable();
@@ -40,7 +39,7 @@ return new class extends Migration
             $table->string('keterangan')->nullable();
             $table->string('code')->nullable();
             $table->string('absen')->nullable();
-            $table->string('att')->nullable();
+            $table->string('att')->primary();
             $table->integer('rit_rfid')->nullable();
             $table->integer('selisih')->nullable();
             $table->string('code2')->nullable();

@@ -107,7 +107,6 @@ class KdcSIms0305Controller extends Controller
     public function excel_data()
     {
         clock($data_kdcsims0305 = KdcSIms0305::select(
-            'id',
             'date',
             'nama',
             'jabatan',
