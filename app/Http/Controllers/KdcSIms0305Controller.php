@@ -138,7 +138,7 @@ class KdcSIms0305Controller extends Controller
             'selisih',
             'code2',
         )
-            ->where('date', '=', '2022-03-01')
+            // ->where('date', '=', '2022-03-01')
             ->get()->toArray());
 
 
