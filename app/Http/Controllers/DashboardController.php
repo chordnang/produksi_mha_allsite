@@ -30,13 +30,13 @@ class DashboardController extends Controller
 
         $KdcDaily0301['ritasi_shift1'] = KdcDaily0301::where('tgl_rfid', '=', $tanggal)
             ->where('shift', '=', 'I')
-            ->count('id');
+            ->count('ticket_number');
         $KdcDaily0301['ritasi_shift2'] = KdcDaily0301::where('tgl_rfid', '=', $tanggal)
             ->where('shift', '=', 'II')
-            ->count('id');
+            ->count('ticket_number');
         $KdcDaily0301['ritasi_shift3'] = KdcDaily0301::where('tgl_rfid', '=', $tanggal)
             ->where('shift', '=', 'III')
-            ->count('id');
+            ->count('ticket_number');
 
         // dd(DB::getQueryLog());
 

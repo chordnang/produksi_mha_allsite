@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kdc_daily0301s', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
             $table->bigInteger('ticket_number');
             $table->string('brand');
             $table->string('silo');
@@ -60,6 +60,7 @@ return new class extends Migration
             $table->integer('totalqty');
             $table->string('linkbd');
             $table->timestamps();
+            $table->primary(array('ticket_number', 'tractor'));
         });
     }
 

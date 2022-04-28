@@ -115,7 +115,6 @@ class KdcDaily0301Controller extends Controller
     public function excel_data()
     {
         clock($data_kdcdaily0301 = KdcDaily0301::select(
-            'id',
             'ticket_number',
             'brand',
             'silo',
