@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 
-use App\Models\KdcSims0305;
+use App\Models\Kdcsims0305;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithStartRow;
 use Maatwebsite\Excel\Concerns\WithCalculatedFormulas;
@@ -16,7 +16,8 @@ class KdcSims0305Import implements ToModel, WithStartRow, WithCalculatedFormulas
      */
     public function model(array $row)
     {
-        return new KdcSims0305([
+        return KdcSIms0305::updateOrCreate(['att' => $row[25]],
+        [
             'date' => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row[0]),
             'nama' => $row[1],
             'jabatan' => $row[2],
