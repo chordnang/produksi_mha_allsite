@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class KdcSIms0305 extends Model
 {
     use HasFactory;
-    protected $primaryKey = "att";
+    protected $primaryKey = "ticket_no";
     protected $guarded = false;
     // protected $fillable = [
     //     'ticket_number',

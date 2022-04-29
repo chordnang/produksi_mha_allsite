@@ -12,7 +12,6 @@
         {{-- Setup data for datatables --}}
         @php
             $heads = [
-                'ID',
                 'ticket_number',
                 'company',
                 'room',

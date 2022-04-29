@@ -16,10 +16,10 @@ class KdcSIms0305Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function index()
     {
@@ -107,35 +107,21 @@ class KdcSIms0305Controller extends Controller
     public function excel_data()
     {
         clock($data_kdcsims0305 = KdcSIms0305::select(
-            'date',
-            'nama',
-            'jabatan',
-            'unit',
-            'roster',
-            'attdn',
-            'buang_awal_shift',
-            'gantung_akhir_shift',
-            'rit_by_manual',
-            'rit_by_rfid',
-            'ritase_actual',
-            'tonase',
-            'lokasi_exa',
-            'jarak',
-            'hm_awal',
-            'hm_akhir',
-            'total_hm',
-            'non_prod',
-            'total_jam',
-            'km_awal',
-            'km_akhir',
-            'total_km',
-            'keterangan',
-            'code',
-            'absen',
-            'att',
-            'rit_rfid',
-            'selisih',
-            'code2',
+            'ticket_no',
+            'company',
+            'room',
+            'date_time',
+            'dump_truck',
+            'pit',
+            'area',
+            'seam',
+            'excavator',
+            'capacity',
+            'coal_brand',
+            'penalty',
+            'tanggal',
+            'shift',
+            'jam',
         )
             // ->where('date', '=', '2022-03-01')
             ->get()->toArray());
